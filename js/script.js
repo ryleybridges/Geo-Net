@@ -7,10 +7,11 @@ $(document).ready(function(){
     type: 'GET',
     dataType: 'json',
     success: function(dataFromJSON){
-      (console.log("working")
+      console.log('the coordinates are ' + dataFromJSON.features[0].geometry.coordinates[0] + ' and ');
+      console.log(dataFromJSON.features[0].geometry.coordinates[1]);
     },
     error: function(){
-      console.log('something has gone wrong');
+      console.log("bad");
     }
   })
 
