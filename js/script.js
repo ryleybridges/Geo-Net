@@ -9,7 +9,6 @@ function initMap(){
       var newZealand = {lat: -41.838875, lng: 174.8860};
       var map = new google.maps.Map(
         document.getElementById('map'), {zoom: 4, center: newZealand});
-      console.log(dataFromJSON.features);
       for (var i = 0; i < dataFromJSON.features.length; i++) {
         const mapCoordinates = dataFromJSON.features[i].geometry.coordinates;
           var marker = new google.maps.Marker({
